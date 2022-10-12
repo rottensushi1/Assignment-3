@@ -1,3 +1,4 @@
+#include "Functions.h"
 #include <stdio.h>
 
 //Taiyo Suzuki
@@ -9,7 +10,21 @@
 
 int main(void)
 {
+	printf_s("Please enter 2 double values separated by a space.\n>");			//prompt user for input
 
+	double a, b;
+
+	if (scanf_s("%lf %lf", &a, &b) != 2)										//scan for user input and check if it is a double, and if it is, save it
+	{
+		printf("\nInput not recognised as a double, please try again.\n");		//if it is not a double, exit the program
+		exit(1);
+	}
+
+	printf_s("\nOriginal: a = %lf b = %lf\n", a, b);							//print original values
+
+	SmallerOf(&a, &b);															//set both values to smaller of the 2 
+
+	printf_s("\nSmaller: a = %lf b = %lf\n", a, b);								//print smaller values
 
 	return 0;
 }
