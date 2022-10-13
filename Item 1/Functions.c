@@ -15,4 +15,5 @@ double SmallerOf(double* x, double* y)
 		*x = *y;
 	else if (*x < *y)
 		*y = *x;
+	return *x;
 }
