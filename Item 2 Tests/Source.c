@@ -41,5 +41,10 @@ void main(void)
 	if (expected == actual)
 		printf("pass\n");
 	else
-		printf("fail\n");
+		printf("fail\n");			
+
+
+	//combination of 5 whole positive/negative numbers 
+	//combination of 5 positive whole/decimal numbers
+	//combination of 5 +/- whole/decimal numbers
 }
