@@ -11,9 +11,9 @@
 //definitions
 #define MAX_ARRAY_SIZE 5
 
-double SumOf(double array[])
+double SumOf(double array[])									//return the sum of the largest and smallest elements of an array of doubles
 {
-	double sum, count;											//initialize variables
+	double sum;													//initialize variables
 	double smallestValue = array[0], largestValue = array[0];	//initialize both smallest and largest value as first array element in order to create 
 																//reference to check other elements against
 
@@ -30,7 +30,15 @@ double SumOf(double array[])
 	return sum;
 }
 
-void PrintSum(double x)
+void PrintInputs(double array[])
 {
-	printf("\nSum = %lf\n", x);
+	for (int i = 0; i < MAX_ARRAY_SIZE; i++)
+	{
+		printf("\nInput[%d] = %lf\n", i + 1, array[i]);			//print original array values		
+	}
+}
+
+void PrintSum(double* x)
+{
+	printf("\nSum = %lf\n", *x);								//print sum of values
 }

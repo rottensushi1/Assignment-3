@@ -10,3 +10,5 @@
 //Header file for function library
 
 double SmallerOf(double*, double*);
+
+void PrintNumbers(double*, double*);

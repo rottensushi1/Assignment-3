@@ -17,3 +17,11 @@ double SmallerOf(double* x, double* y)
 		*y = *x;
 	return *x;
 }
+
+void PrintNumbers(double* x, double* y)
+{
+	if (*x == *y) 
+		printf("\nSmallest value now stored in both variables: num1 = %lf num2 = %lf\n", *x, *y);
+	else 
+		printf("\nOriginal values: num1 = %lf num2 = %lf\n", *x, *y);
+}

@@ -10,4 +10,6 @@
 
 double SumOf(double[]);
 
-void PrintSum(double);
+void PrintInputs(double[]);
+
+void PrintSum(double*);

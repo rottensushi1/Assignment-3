@@ -24,12 +24,9 @@ int main(void)
 
 	sum = SumOf(inputs);																					//calcuate sum of smallest and largest elements
 	
-	for (int i = 0; i < MAX_ARRAY_SIZE; i++)									
-	{
-		printf_s("\nArray[%d] = %lf\n", i, inputs[i]);														//print original array values		
-	}
+	PrintInputs(inputs);
 
-	PrintSum(sum);																							//print sum of values
+	PrintSum(&sum);																							
 
 	return 0;
 }
