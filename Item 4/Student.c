@@ -1,5 +1,4 @@
 #include "Student.h"
-#include <stdio.h>
 
 //Taiyo Suzuki
 //Sept 23, 2022
@@ -17,9 +16,4 @@
 //2001041234 – LastName, FirstName MiddleInitial. Note that only the initial of the middle name should be printed, followed by a period.
 //Any of your students who lack a middle name will end the output line at the end of the first name.
 
-int main(void)
-{
-
-
-	return 0;
-}
+//implementation of student structures
