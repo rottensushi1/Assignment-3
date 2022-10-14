@@ -11,7 +11,7 @@
 //Implementation of Function Library
 #define MAX_ARRAY_SIZE 4
 
-double* MultiplyTwoArraysIntoThird(double array1[MAX_ARRAY_SIZE], double array2[MAX_ARRAY_SIZE], double productArray[MAX_ARRAY_SIZE])
+void MultiplyTwoArraysIntoThird(double* array1[MAX_ARRAY_SIZE], double* array2[MAX_ARRAY_SIZE], double* productArray[MAX_ARRAY_SIZE])
 {
-	return productArray;
+
 }
