@@ -10,7 +10,7 @@
 //Implementation of function library
 
 double SmallerOf(double* x, double* y)
-{
+{																			//calculate the smaller value and store it to both variables
 	if (*y < *x)
 		*x = *y;
 	else if (*x < *y)
@@ -19,7 +19,7 @@ double SmallerOf(double* x, double* y)
 }
 
 void PrintNumbers(double* x, double* y)
-{
+{																			//print values stored to variables
 	if (*x == *y) 
 		printf("\nSmallest value now stored in both variables: num1 = %lf num2 = %lf\n", *x, *y);
 	else 

@@ -18,7 +18,7 @@ int main(void)
 	{
 		printf("\nInput not recognised as a double, please try again.\n");		//if it is not a double, exit the program
 		exit(1);
-	}														
+	}
 
 	PrintNumbers(&num1, &num2);													//print original values
 
