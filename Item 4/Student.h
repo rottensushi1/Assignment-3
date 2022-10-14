@@ -16,4 +16,6 @@
 //2001041234 – LastName, FirstName MiddleInitial. Note that only the initial of the middle name should be printed, followed by a period.
 //Any of your students who lack a middle name will end the output line at the end of the first name.
 
-//header file for student structures
+//header file for student related utilities
+
+void PrintStudent();
