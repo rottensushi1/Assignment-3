@@ -12,16 +12,30 @@
 //definitions
 
 #define MAX_ARRAY_SIZE 4
+
 int main(void)
 {
-	double* inputs1[MAX_ARRAY_SIZE], inputs2[MAX_ARRAY_SIZE], products[MAX_ARRAY_SIZE];
-	//create and assign values to arrays (get double input values)
+	double inputs1[MAX_ARRAY_SIZE], inputs2[MAX_ARRAY_SIZE], products[MAX_ARRAY_SIZE];			//create arrays and get double input values
 
-	//send arrays to function (3 arrays, 2 source 1 destination)
-	
-	MultiplyTwoArraysIntoThird(&inputs1, &inputs2, &products);
+	printf("Please enter 4 double values separated by spaces\n>");								//prompt user for inputs
 
-	//return third array containing product of array elements
+	if (scanf_s("%lf %lf %lf %lf", &inputs1[0], &inputs1[1], &inputs1[2], &inputs1[3]) != 4)	//scan for user input and check if it is a double, and if it is, save it
+	{
+		printf("\nInput not recognised as double value, please try again.\n");					//if it is not a double, or there are not enough doubles, exit the program
+		exit(1);
+	}
+
+	printf("Please enter 4 more double values separated by spaces\n>");							//prompt user for second set of inputs
+
+	if (scanf_s("%lf %lf %lf %lf", &inputs2[0], &inputs2[1], &inputs2[2], &inputs2[3]) != 4)	//scan for user input and check if it is a double, and if it is, save it
+	{
+		printf("\nInput not recognised as double value, please try again.\n");					//if it is not a double, or there are not enough doubles, exit the program
+		exit(1);
+	}
+
+	MultiplyTwoArraysIntoThird(inputs1, inputs2, products);										//send arrays to function (3 arrays, 2 source 1 destination)
+
+	PrintArray(products);																		//display products
 
 	return 0;
 }

@@ -24,7 +24,7 @@ int main(void)
 
 	sum = SumOf(inputs);																					//calcuate sum of smallest and largest elements
 	
-	PrintInputs(inputs);
+	PrintInputs(inputs);																					//print outputs
 
 	PrintSum(&sum);																							
 

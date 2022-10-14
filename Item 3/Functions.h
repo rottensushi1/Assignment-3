@@ -10,4 +10,6 @@
 
 //Header file for function library
 
-void MultiplyTwoArraysIntoThird(double*[], double*[], double []);
+void MultiplyTwoArraysIntoThird(double*, double*, double*);
+
+void PrintArray(double*);
