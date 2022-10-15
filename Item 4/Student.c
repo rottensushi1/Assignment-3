@@ -18,7 +18,36 @@
 
 //implementation of student utils
 
-void PrintStudent()
-{
+//definitions
+#define STUDENTNUMSIZE	10
+#define NAMESIZE		20
+#define MAXSTUDENTS		5
 
+struct studentInfo CreateStudent(double* stuNum[], struct studentName stuName)
+{
+	struct studentInfo student;
+
+	return student;
+}
+
+double* GetStudentNumber(double* year[], double* month[], double* code[])
+{
+	double stuNum[STUDENTNUMSIZE];
+
+	return stuNum;
+}
+
+struct studentName GetStudentName(char* firstName[], char* middleName[], char* lastName[])
+{
+	struct studentName stuName;
+
+	return stuName;
+}
+
+void PrintStudents(struct studentInfo* students[])
+{
+	for (int i = 0; i < MAXSTUDENTS; i++)			//run 5 times, to print all students
+	{
+		
+	}
 }

@@ -1,4 +1,5 @@
-#pragma once
+#include "..\Item 4\Student.h"
+#include <stdio.h>
 
 //Taiyo Suzuki
 //Sept 23, 2022
@@ -16,28 +17,11 @@
 //2001041234 – LastName, FirstName MiddleInitial. Note that only the initial of the middle name should be printed, followed by a period.
 //Any of your students who lack a middle name will end the output line at the end of the first name.
 
-//header file for student related utilities
+//tests
 
-//definitions
-#define STUDENTNUMSIZE	10
-#define NAMESIZE		20
-#define MAXSTUDENTS		5
+int main(void)
+{
 
-typedef struct studentName {
-	char firstName[NAMESIZE];
-	char middleName[NAMESIZE];
-	char lastName[NAMESIZE];
-} STUDENT;
 
-typedef struct studentInfo {
-	double studentNumber[STUDENTNUMSIZE];
-	struct studentName stuName;
-} STUDENTINFO;
-
-struct studentInfo CreateStudent(double*[], struct studentName);
-
-double* GetStudentNumber(double*[], double*[], double*[]);
-
-struct studentName GetStudentName(char*[], char*[], char*[]);
-
-void PrintStudents(struct studentInfo*[]);
+	return 0;
+}

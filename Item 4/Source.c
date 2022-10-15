@@ -17,9 +17,34 @@
 //2001041234 – LastName, FirstName MiddleInitial. Note that only the initial of the middle name should be printed, followed by a period.
 //Any of your students who lack a middle name will end the output line at the end of the first name.
 
+//definitions
+#define STUDENTNUMSIZE	10
+#define NAMESIZE		20
+#define MAXSTUDENTS		5
+
 int main(void)
 {
+	int studentCount = 0;																	//create student counter
+	struct studentInfo students[MAXSTUDENTS];												//create student structure array
 
+	while (studentCount < 5)																//while there are less than 5 students, create a student
+	{
+		double year[4], month[2], code[4];													//store year, month, and code
+		//*TODO get and save student num inputs (birth year, month, 4 digit code)
+
+		double* studentNumber[] = GetStudentNumber(year, month, code);						//create student num from inputs
+		
+		char* firstName[NAMESIZE], middleName[NAMESIZE], lastName[NAMESIZE];				//store names
+		//*TODO get student name inputs
+
+		struct studentName studentName = GetStudentName(firstName, middleName, lastName);	//create student name stucture from inputs
+		
+		students[studentCount] = CreateStudent(studentNumber, studentName);					//create student structure and add to student array
+
+		studentCount++;
+	}
+
+	PrintStudents(students);																//call print function to print all students from array
 
 	return 0;
 }
