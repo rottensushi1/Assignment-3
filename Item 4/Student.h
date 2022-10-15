@@ -30,11 +30,11 @@ typedef struct studentName {
 } STUDENTNAME;
 
 typedef struct studentInfo {
-	double studentNumber[STUDENTNUMSIZE];
+	double studentNumber;
 	struct studentName stuName;
 } STUDENTINFO;
 
-void CreateStudent(double*, double [], double*, char* [], char* [], char* []);
+void CreateStudent(double*, struct studentInfo [], int*, char* [], char* [], char* []);
 
 double GetStudentNumber(double[], double[], double[]);
 

@@ -24,7 +24,7 @@
 
 int main(void)
 {
-	double studentCount = 0;																								//create student counter
+	int* studentCount = 0;																								//create student counter
 	STUDENTINFO students[MAXSTUDENTS];																			//create student structure array
 
 	while (studentCount < 5)																							//while there are less than 5 students, create a student
@@ -47,7 +47,7 @@ int main(void)
 		char* firstName[NAMESIZE], middleName[NAMESIZE], lastName[NAMESIZE];											//store names
 		//*TODO get student name inputs
 		
-		CreateStudent(&studentNumber, students, &studentCount, firstName, middleName, lastName);												//create student and add to student array (modify student at the student count)
+		CreateStudent(&studentNumber, students, &studentCount, &firstName, &middleName, &lastName);												//create student and add to student array (modify student at the student count)
 
 		studentCount++;
 	}
