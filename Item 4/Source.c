@@ -24,27 +24,35 @@
 
 int main(void)
 {
-	int studentCount = 0;																	//create student counter
-	struct studentInfo students[MAXSTUDENTS];												//create student structure array
+	double studentCount = 0;																								//create student counter
+	STUDENTINFO students[MAXSTUDENTS];																			//create student structure array
 
-	while (studentCount < 5)																//while there are less than 5 students, create a student
+	while (studentCount < 5)																							//while there are less than 5 students, create a student
 	{
-		double year[4], month[2], code[4];													//store year, month, and code
-		//*TODO get and save student num inputs (birth year, month, 4 digit code)
+		double year[4], month[2], code[4];																				//store year, month, and code
+		//*TODO improve student num input
 
-		double* studentNumber[] = GetStudentNumber(year, month, code);						//create student num from inputs
+		printf("Enter your birth year, birth month, and a 4 digit code as double values in the following format:\n>");	//prompt user for input
+		printf("Y Y Y Y M M X X X X\n>");
+
+		if (scanf_s("%lf %lf %lf %lf %lf %lf %lf %lf %lf %lf", &year[0], &year[1], &year[2], &year[3], &month[0], 
+			&month[1], &code[0], &code[1], &code[2], &code[3]) != 10)													//scan for user input and check if it is a double, and if it is, save it
+		{
+			printf("\nInput not recognised as double value, please try again.\n");										//if it is not a double, or there are not enough doubles, exit the program
+			exit(1);
+		}
+
+		double studentNumber = GetStudentNumber(year, month, code);														//create student num from inputs
 		
-		char* firstName[NAMESIZE], middleName[NAMESIZE], lastName[NAMESIZE];				//store names
+		char* firstName[NAMESIZE], middleName[NAMESIZE], lastName[NAMESIZE];											//store names
 		//*TODO get student name inputs
-
-		struct studentName studentName = GetStudentName(firstName, middleName, lastName);	//create student name stucture from inputs
 		
-		students[studentCount] = CreateStudent(studentNumber, studentName);					//create student structure and add to student array
+		CreateStudent(&studentNumber, students, &studentCount, firstName, middleName, lastName);												//create student and add to student array (modify student at the student count)
 
 		studentCount++;
 	}
 
-	PrintStudents(students);																//call print function to print all students from array
+	PrintStudents(students);																							//call print function to print all students from array
 
 	return 0;
 }

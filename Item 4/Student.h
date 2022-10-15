@@ -27,17 +27,17 @@ typedef struct studentName {
 	char firstName[NAMESIZE];
 	char middleName[NAMESIZE];
 	char lastName[NAMESIZE];
-} STUDENT;
+} STUDENTNAME;
 
 typedef struct studentInfo {
 	double studentNumber[STUDENTNUMSIZE];
 	struct studentName stuName;
 } STUDENTINFO;
 
-struct studentInfo CreateStudent(double*[], struct studentName);
+void CreateStudent(double*, double [], double*, char* [], char* [], char* []);
 
-double* GetStudentNumber(double*[], double*[], double*[]);
+double GetStudentNumber(double[], double[], double[]);
 
-struct studentName GetStudentName(char*[], char*[], char*[]);
+void GetStudentName(char*[], char*[], char*[]);
 
 void PrintStudents(struct studentInfo*[]);

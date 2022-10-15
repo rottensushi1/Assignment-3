@@ -23,25 +23,30 @@
 #define NAMESIZE		20
 #define MAXSTUDENTS		5
 
-struct studentInfo CreateStudent(double* stuNum[], struct studentName stuName)
+void CreateStudent(double* stuNum, double students[], double* studentCount, char* firstName[], char* middleName[], char* lastName[])
 {
-	struct studentInfo student;
-
-	return student;
+	STUDENTNAME  student = { firstName, middleName, lastName };
 }
 
-double* GetStudentNumber(double* year[], double* month[], double* code[])
+double GetStudentNumber(double year[], double month[], double code[])
 {
-	double stuNum[STUDENTNUMSIZE];
+	double stuNum = year[0] * 1000000000 +
+		year[1] * 100000000 +
+		year[2] * 10000000 +
+		year[3] * 1000000 +
+		month[0] * 100000 + 
+		month[1] * 10000 + 
+		code[0] * 1000 + 
+		code[1] * 100 + 
+		code[2] * 10 +
+		code[3];
 
 	return stuNum;
 }
 
-struct studentName GetStudentName(char* firstName[], char* middleName[], char* lastName[])
+void GetStudentName(char* firstName[], char* middleName[], char* lastName[])
 {
-	struct studentName stuName;
 
-	return stuName;
 }
 
 void PrintStudents(struct studentInfo* students[])
